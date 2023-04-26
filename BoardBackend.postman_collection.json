@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "454fd9d2-5da3-473a-80c3-df995da759c6",
+		"name": "BoardBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19576160"
+	},
+	"item": [
+		{
+			"name": "게시글등록",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-ncp-apigw-timestamp",
+						"value": "1648701138867",
+						"type": "text"
+					},
+					{
+						"key": "x-ncp-iam-access-key",
+						"value": "HtguY5SrBtzUgJ6ejsom",
+						"type": "text"
+					},
+					{
+						"key": "x-ncp-apigw-signature-v2",
+						"value": "AhQ7qmpWA+VNTVKXXjzPYbEoTGFDwjIxfImPowdNGGs=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\" : \"b\",\r\n    \"title\" : \"test-b\",\r\n    \"contents\" : \"contents-b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "게시글조회",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "게시글수정",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\" : \"b-edit\",\r\n    \"title\" : \"test-b-edit\",\r\n    \"contents\" : \"contents-b-edit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "게시글삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
